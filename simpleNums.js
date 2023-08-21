@@ -1,17 +1,18 @@
-const simpleNums = (nums) => {
-    for (let i = 0; i < nums.length; i++) {
-        if (nums[i] === 1)
-            nums[i] = Infinity
-        else {
-            let j = nums[i] - 1
-            while (nums[i] % j !== 0 && j > 1) {
-                j--
-            }
-            if (j !== 1) nums[i] = Infinity
+const simpleNums = (num) => {
+    let res = []
+
+    while (num > 1) {
+        let tmp = num
+        let i = num - 1
+        while (num % i !== 0 && i > 1) {
+            i--
         }
+        if (i === 1)
+            res.push(tmp)
+        num--
     }
 
-    return nums.filter(i => i !== Infinity)
+    return res.reverse()
 }
 
-simpleNums([1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 15, 20, 25, 30, 100])
+simpleNums(100)
