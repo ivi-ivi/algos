@@ -1,17 +1,17 @@
 const secondSort = (arr) => {
-    let res = []
+    let res = [0]
     let min = Infinity
-    let minIdx = -1
     for (let j = 0; j < arr.length; j++) {
         for (let i = 0; i < arr.length; i++) {
-            if (arr[i] !== '-' && arr[i] < min) {
+            if (arr[i] < min && res[res.length - 1] < arr[i]) {
                 min = arr[i]
-                minIdx = i
             }
         }
-        res.push(min)
-        arr[minIdx] = '-'
+        if (min !== Infinity)
+            res.push(min)
         min = Infinity
     }
-    return res
+    return res.slice(1)
 }
+
+secondSort([1, 7, 6, 3, 0])
