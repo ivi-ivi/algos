@@ -13,6 +13,20 @@ const simpleNums = (num) => {
     }
 
     return res.reverse()
+
+    // for (let i = 0; i < nums.length; i++) {
+    //     if (nums[i] === 1)
+    //         nums[i] = Infinity
+    //     else {
+    //         let j = nums[i] - 1
+    //         while (nums[i] % j !== 0 && j > 1) {
+    //             j--
+    //         }
+    //         if (j !== 1) nums[i] = Infinity
+    //     }
+    // }
+    //
+    // return nums.filter(i => i !== Infinity)
 }
 
-simpleNums(100)
+simpleNums(25)
