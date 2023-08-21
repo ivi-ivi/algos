@@ -29,4 +29,4 @@ const simpleNums = (num) => {
     // return nums.filter(i => i !== Infinity)
 }
 
-simpleNums(25)
+simpleNums(100)
