@@ -14,8 +14,9 @@ const skobki = (str) => {
         }
     }
 
-    return true
+    return !stack.length;
+
 }
 
 
-skobki('{}[]{}')
+skobki('(((')
